@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description:'Print hello world'
+ * Description:'Print nice citation on stdio'
  *
  * Return:Always 0(Success)
  */
