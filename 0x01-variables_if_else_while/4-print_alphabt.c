@@ -11,7 +11,7 @@ char a;
 char new_line = '\n';
 for (a = 'a'; a <= 'z'; a++)
 {
-	if ((a != 'q') || (a != 'e'))
+	if ((a == 'q') || (a == 'e'))
 		putchar(a);
 }
 putchar(new_line);
