@@ -12,7 +12,10 @@ char new_line = '\n';
 for (a = 'a'; a <= 'z'; a++)
 {
 	if ((a == 'q') || (a == 'e'))
-		putchar(a);
+	{
+		continue;
+	}
+	putchar(a);
 }
 putchar(new_line);
 return (0);
