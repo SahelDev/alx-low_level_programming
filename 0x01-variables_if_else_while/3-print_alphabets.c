@@ -20,4 +20,5 @@ for (a = 'A'; a <= 'Z'; a++)
 	putchar(a);
 }
 putchar(new_line);
+return (0);
 }
