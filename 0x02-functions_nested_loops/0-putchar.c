@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * main - prints out the world __putchar on stdio
  * Return: 0 if execute successfully
