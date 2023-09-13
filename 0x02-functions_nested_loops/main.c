@@ -9,14 +9,18 @@
  *
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
+	int i;
 	int j;
-	for(j=97; j <= 122; j++)
-	{
-		if (c==j)
+	
+	for (i = 97; i <= 122; i++)
+		if (c == i)
 			return (1);
-	}
+	for (j = 65; j <= 90; j++)
+		if (c == j)
+			return (1);
+
 	return (0);
 	
 }
@@ -24,8 +28,12 @@ int _islower(int c)
 
 int main (void)
 {
-int character =	_islower('C');
+int character =	_isalpha('C');
 putchar(character + '0');
+int character1 = _isalpha('0');
+putchar(character1 + '0');
+int character2 = _isalpha('a');
+putchar(character2 + '0');
 
 }
 
