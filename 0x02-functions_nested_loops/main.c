@@ -8,32 +8,34 @@
  *
  *
  */
-
-int _isalpha(int c)
+int print_sign(int n)
 {
-	int i;
-	int j;
-	
-	for (i = 97; i <= 122; i++)
-		if (c == i)
-			return (1);
-	for (j = 65; j <= 90; j++)
-		if (c == j)
-			return (1);
-
-	return (0);
-	
+	if (n>0)
+	{
+		putchar('+');
+		return (1);
+	}
+	if (n < 0)
+	{
+		putchar('-');
+		return (-1);
+	}
+	if (n == 0)
+	{
+		putchar('0');
+		return (0);
+	}
 }
 
 
 int main (void)
 {
-int character =	_isalpha('C');
-putchar(character + '0');
-int character1 = _isalpha('0');
-putchar(character1 + '0');
-int character2 = _isalpha('a');
-putchar(character2 + '0');
+	int r;
+
+	r = print_sign(-1);
+	putchar(',');
+	putchar(r +'0');
+
 
 }
 
