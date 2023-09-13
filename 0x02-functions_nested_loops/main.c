@@ -33,13 +33,19 @@ int print_sign(int n)
 
 int main (void)
 {
-	int r;
-
-	r = print_sign(-1);
-	putchar(',');
-	putchar(r +'0');
-	return (0);
-
+	int i;
+	int n;
+	
+	for (i = 10; i <= 19; i++)
+	{ 
+		n = i % 10;
+		putchar('0');
+		putchar('0');
+		putchar(':');
+		putchar('0');
+		putchar('0'+ n);
+		putchar('\n');
+	}
 
 }
 
