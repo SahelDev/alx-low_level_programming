@@ -1,5 +1,6 @@
 #include "main.h"
 #include<stdio.h>
+#include "3-convert_day.c"
 
 /**
  * print_remaining_days - takes a date and prints
@@ -7,11 +8,13 @@
  *, taking leap years into account
  * @month: month in number format
  * @day: day of the month
- * @year: year
+ * @year: yeari
  * Return: void
  */
 void print_remaining_days(int month, int day, int year)
 {
+	day = convert_day(month, day);
+
 	if ((year % 4 == 0) && (year % 400 == 0 || year % 100 != 0))
 	{
 		if (month >= 3 && day >= 60)
@@ -34,3 +37,4 @@ void print_remaining_days(int month, int day, int year)
 		}
 	}
 }
+
