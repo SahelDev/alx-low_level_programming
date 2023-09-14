@@ -1,6 +1,6 @@
 #include "main.h"
 #include<stdio.h>
-#include "3-convert_day.c"
+
 
 /**
  * print_remaining_days - takes a date and prints
@@ -13,7 +13,7 @@
  */
 void print_remaining_days(int month, int day, int year)
 {
-	day = convert_day(month, day);
+	
 
 	if ((year % 4 == 0) && (year % 400 == 0 || year % 100 != 0))
 	{
