@@ -16,13 +16,11 @@ void more_numbers(void)
 	for (k = 0; k < 10; k++)
 	{
 		for (j = 0; j <= 9; j++)
-			putchar('0' + j % 10);
+			_putchar('0' + j % 10);
 		for (i = 10; i <= 14; i++)
 	{
-		putchar('0' + 1);
-		putchar('0' + i % 10);
+		_putchar('0' + 1);
+		_putchar('0' + i % 10);
 	}
-
-	putchar('\n');
 }
 }
