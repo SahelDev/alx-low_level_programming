@@ -16,12 +16,12 @@ int main(void)
 			printf("FizzBuzz ");
 		}
 		else
-			if ((i % 5 == 0) && !(i % 3 == 0))
+			if (i % 5 == 0)
 			{
 				printf("Buzz ");
 			}
 			else
-				if (!(i % 5 == 0) && (i % 3 == 0))
+				if (i % 3 == 0)
 				{
 					printf("Fizz ");
 				}
