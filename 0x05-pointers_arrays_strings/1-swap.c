@@ -9,22 +9,9 @@
  */
 void swap_int(int *a, int *b)
 {
-	int *q;
+	int q;
 
-	q = a;
-	a = b;
-	b = q;
-	
-}
-
-int main(void)
-{
-	int a = 1;
-	int b = 2;
-
-	printf (" \n Avant la fonction SWAP ; a = %d et b = %d ", a, b);
-	swap_int(&a, &b);
-	printf (" \n Après la fonction SWAP ; a = %d et b = %d ", a, b);
-	return (0);
-
+	q = *a;
+	*a = *b;
+	*b = q;
 }
