@@ -19,5 +19,4 @@ void print_rev(char *s)
 		putchar(*p);
 		p = p - 1;
 	}
-	putchar('\n');
-}
+	}
