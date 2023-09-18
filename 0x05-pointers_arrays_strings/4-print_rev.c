@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 /**
  * print_rev - print a string in reverse
  * @s: a string
