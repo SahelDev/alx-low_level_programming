@@ -1,17 +1,28 @@
 #include "main.h"
-
 /**
- * string_toupper - uppers a lower
- * @s: character to make upper
- * Return: return value of upper
+ * cap_string - capitalizes all words of a string
+ * @s: input string.
+ * Return: the pointer to dest.
  */
-char *string_toupper(char *s)
+char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[i] != '\0')
+	{
 		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] = s[i] - 32;
+		{
+			if (i == 0 || s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n' ||
+					s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+					s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+					s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+					s[i - 1] == '}')
+			{
+				s[i] -= 32;
+			}
+		}
+		i++;
+	}
 
 	return (s);
 }
