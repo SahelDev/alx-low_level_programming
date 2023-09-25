@@ -1,5 +1,5 @@
-#include "0-memset.c"
 #include <stdio.h>
+#include "main.h"
 
 /**
  * simple_print_buffer - prints buffer in hexa
