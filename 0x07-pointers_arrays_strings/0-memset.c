@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _memset - fills the first n bytes of memory area pointed to by
  * @s: P1
