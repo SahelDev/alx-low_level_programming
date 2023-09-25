@@ -1,4 +1,3 @@
-#include<stdlib.h>
 #include "main.h"
 /**
  * _strchr - a pointer to the first occurence of the character c
