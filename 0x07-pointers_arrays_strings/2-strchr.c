@@ -1,5 +1,5 @@
 #include "main.h"
-#include<stddef.h>
+#include<stdlib.h>
 /**
  * _strchr - a pointer to the first occurence of the character c
  * in the string s or null
@@ -10,7 +10,7 @@
 
 char *_strchr(char *s, char c)
 {
-	for (; (*s != '\0'); )
+	for (; (*s); )
 	{
 		if (*s == c)
 			return (s);
