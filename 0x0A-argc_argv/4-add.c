@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	argc = argc - 1;
 	argv++;
-	
+
 	while (argc != 0)
 	{
 		if (atoi(*argv) == 0)
@@ -33,6 +33,6 @@ int main(int argc, char *argv[])
 		argv++;
 		argc = argc - 1;
 	}
-	printf("%d\n",sum);
+	printf("%d\n", sum);
 	return (0);
 }
