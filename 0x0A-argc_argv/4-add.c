@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<ctype.h>
 #include<stdlib.h>
 /**
  * main - programs that adds positive numbers
@@ -16,8 +15,10 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (0);
+		
 	}
+	else
+	{
 
 	argc = argc - 1;
 	argv++;
@@ -34,5 +35,6 @@ int main(int argc, char *argv[])
 		argc = argc - 1;
 	}
 	printf("%d\n", sum);
+	}
 	return (0);
 }
