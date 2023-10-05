@@ -1,39 +1,40 @@
-#include<stdio.h>
-#include<stdlib.h>
-/**
- * main - programs that adds positive numbers
- * @argc : P1
- * @argv : P2
- * Return: void
- */
+#include <ctype.h>
+#include <stdlib.h>
+#include <stdio.h>
 
+/**
+ * main - adds positive numbers
+ *
+ * @argc: argument counter
+ * @argv: argument vector
+ *
+ * Return: 1 if ERROR such as symbols that are not numbers,
+ * 0 if nothing is passed
+ */
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int c, d;
+	int n = 0;
 
 	if (argc < 2)
 	{
 		printf("0\n");
-	}i
-	else
-	{
+		return (0);
+	}
 
-	argc = argc - 1;
-	argv++;
-
-	while (argc != 0)
+	for (c = 1; c < argc; c++)
 	{
-		if (atoi(*argv) == 0)
+		for (d = 0; argv[c][d] != '\0'; d++)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[c][d] < '0' || argv[c][d] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += atoi(*argv);
-		argv++;
-		argc = argc - 1;
+		n += atoi(argv[c]);
 	}
-	printf("%d\n", sum);
-	}
+	printf("%d\n", n);
 	return (0);
 }
