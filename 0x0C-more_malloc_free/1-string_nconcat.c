@@ -10,59 +10,37 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0;
-	unsigned int j = 0;
-	unsigned int size = 0;
-	char *ptr, *ptr2;
-	char *s12, *s22;
-	unsigned int flag = 1;
+	unsigned int i = 0, j = 0, size = 0, k = 0;
+	unsigned int m = 0, p = 0;
+	char *ptr;
 
-	s12 = s1;
-	s22 = s2;
-	
-	while (*s1 != '\0')
-	{
+
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[i] != '\0')
 		i++;
-		s1++;
-	}
-	while (*s2 != '\0')
-	{
+	while (s2[j] != '\0')
 		j++;
-		s2++;
-	}
-	size = n + i;
-	ptr = malloc(sizeof(char) * size);
+
+	if (j > n)
+		j = n;
+
+	size = j + i;
+	ptr = malloc(sizeof(char) * (size+1));
 	if (ptr == NULL)
 		return (NULL);
-	ptr2 = ptr;
-	while (*s12 != '\0')
+	for (p = 0; p < i; p++)
 	{
-		*ptr = *s12;
-		ptr++;
-		s12++;
+		ptr[k++] = s1[p];
+	
 	}
-	if (s2 == NULL)
-		return (s12);
-	if (n < j)
+	for (m = 0; m < j; m++)
 	{
-		while (flag <= n)
-		{
-			*ptr = *s22;
-			ptr++;
-			s22++;
-			flag++;
-		}
-		ptr[n+1] = '\0';
+		ptr[k++] = s2[m];	
 	}
-	else
-	{
-		while (flag <= n)
-		{
-			*ptr = *s22;
-			ptr++;
-			s22++;
-			flag++;
-		}
-	}
-	return (ptr2);
+	ptr[k] = '\0';
+
+	return (ptr);
 }
