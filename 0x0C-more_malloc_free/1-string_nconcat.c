@@ -15,10 +15,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int size = 0;
 	char *ptr, *ptr2;
 	char *s12, *s22;
-	unsigned int flag = 0;
+	unsigned int flag = 1;
 
 	s12 = s1;
 	s22 = s2;
+	
 	while (*s1 != '\0')
 	{
 		i++;
@@ -40,12 +41,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr++;
 		s12++;
 	}
-	while (flag <= n)
+	if (s2 == NULL)
+		return (s12);
+	if (n < j)
 	{
-		*ptr = *s22;
-		ptr++;
-		s22++;
-		flag++;
+		while (flag <= n)
+		{
+			*ptr = *s22;
+			ptr++;
+			s22++;
+			flag++;
+		}
+		ptr[n+1] = '\0';
+	}
+	else
+	{
+		while (flag <= n)
+		{
+			*ptr = *s22;
+			ptr++;
+			s22++;
+			flag++;
+		}
 	}
 	return (ptr2);
 }
