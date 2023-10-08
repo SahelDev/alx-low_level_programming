@@ -28,17 +28,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		j = n;
 
 	size = j + i;
-	ptr = malloc(sizeof(char) * (size+1));
+	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (p = 0; p < i; p++)
 	{
 		ptr[k++] = s1[p];
-	
 	}
 	for (m = 0; m < j; m++)
 	{
-		ptr[k++] = s2[m];	
+		ptr[k++] = s2[m];
 	}
 	ptr[k] = '\0';
 
