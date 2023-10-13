@@ -2,7 +2,7 @@
 #include<stddef.h>
 
 /**
- * array_iterator- execute a function given as a parameter on each element 
+ * array_iterator- execute a function given as a parameter on each element
  * @array:P1
  * @size:P2
  * @action:P3
