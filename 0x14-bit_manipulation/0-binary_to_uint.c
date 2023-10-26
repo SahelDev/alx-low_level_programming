@@ -9,35 +9,31 @@
 unsigned int binary_to_uint(const char *b)
 {
 
-	int i = 0;
-	unsigned int n = 0;
-	int power = 0;
+	unsigned int unint;
+	int taille, base_two;
 
-	if (*b == '\0')
+	if (!b)
 		return (0);
 
-	while (b[i + 1])
-		i++;
+	unint = 0;
 
-	while (i >= 0)
+	for (taille = 0; b[taille] != '\0'; taille++)
+		;
+
+	for (taille--, base_two = 1; taille >= 0; taille--, base_two *= 2)
 	{
-		if (b[i] == '0')
+		if (b[taille] != '0' && b[taille] != '1')
 		{
-			i--;
-			power++;
-		}
-		else if (b[i] == '1')
-		{
-			n += (1 << power);
-			i--;
-			power++;
-		}
-		else
 			return (0);
+		}
+
+		if (b[taille] & 1)
+		{
+			unint += base_two;
+		}
 	}
-	return (n);
 
-
+	return (unint);
 
 
 }
